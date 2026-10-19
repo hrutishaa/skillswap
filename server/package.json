@@ -1,0 +1,24 @@
+{
+  "name": "skillswap-server",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node src/index.js",
+    "migrate": "node src/migrate.js",
+    "seed": "node src/seed.js",
+    "test": "DATABASE_URL=${TEST_DATABASE_URL:-postgres://skillswap:skillswap@localhost:5432/skillswap_test} node --test --test-concurrency=1 test/*.test.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.12.0",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "supertest": "^7.0.0",
+    "socket.io-client": "^4.7.5"
+  }
+}
